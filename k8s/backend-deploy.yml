@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-backend
+  labels:
+    app: kube-backend
+    tier: backend 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kube-backend
+  template:
+    metadata:
+      labels:
+        app: kube-backend
+        tier: backend 
+    spec: 
+      containers:
+        - name: kube-backend
+          image: adityadevops/kube-backend:v2
+          ports:
+            - containerPort: 8080

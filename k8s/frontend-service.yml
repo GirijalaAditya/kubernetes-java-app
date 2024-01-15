@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: kube-frontend
+  labels:
+    app: kube-frontend
+    tier: frontend  
+spec:
+  type: LoadBalancer
+  selector:
+    app: kube-frontend
+  ports: 
+    - name: http
+      port: 80
+      targetPort: 80
