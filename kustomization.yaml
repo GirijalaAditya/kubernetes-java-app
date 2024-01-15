@@ -1,0 +1,5 @@
+resources:
+- ./k8s/backend-deploy.yml
+- ./k8s/backend-service.yml
+- ./k8s/frontend-deploy.yml
+- ./k8s/frontend-service.yml
